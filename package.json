@@ -1,5 +1,5 @@
 {
-  "name": "feather-css",
+  "name": "css-icon-font-generator",
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "feather-icons": "^4.7.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-concat": "^2.6.1",
