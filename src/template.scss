@@ -37,5 +37,7 @@
 
 <% _.each(glyphs, function(glyph) { %>.<%= cssClass%>-<%= glyph.fileName %> {
 	@include <%= cssClass%>(<%= glyph.fileName %>);
+	display: inline-block;
+	vertical-align: middle;
 }
 <% }); %>

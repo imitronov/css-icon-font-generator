@@ -60,7 +60,7 @@ gulp.task( "sass", function() {
 } );
 
 gulp.task( "base64", function() {
-	return gulp.src( src + "dist/*.{woff, ttf}" )
+	return gulp.src( src + "dist/" + iconPrefix + ".{woff, ttf}" )
 		.pipe( font2css() )
 		.pipe( concat( iconPrefix + "-font.min.css") )
 		.pipe( gulp.dest( src + "dist/" ) );
