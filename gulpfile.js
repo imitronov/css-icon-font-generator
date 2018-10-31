@@ -18,6 +18,18 @@ var iconPrefix = 'fe';
 // var iconPack = 'entypo';
 // var iconPrefix = 'et';
 
+/* Ionicon ios + */
+// var iconPack = 'ionios';
+// var iconPrefix = 'ios';
+
+/* Ionicon material design + */
+// var iconPack = 'ionmd';
+// var iconPrefix = 'md';
+
+/* Ionicon logo + */
+// var iconPack = 'ionlogo';
+// var iconPrefix = 'logo';
+
 /*******************************************/
 
 var src	= './';
