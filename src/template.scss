@@ -1,13 +1,13 @@
 @mixin <%= cssClass%>-styles {
 	font-family: "<%= fontName %>";
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
-	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
-	text-decoration: none;
-	text-transform: none;
+	line-height: 1;
+	vertical-align: -.125em;
 }
 
 %<%= cssClass%> {
@@ -37,8 +37,6 @@
 
 <% _.each(glyphs, function(glyph) { %>.<%= cssClass%>-<%= glyph.fileName %> {
 	@include <%= cssClass%>(<%= glyph.fileName %>);
-	display: inline-block;
-	vertical-align: middle;
-	line-height: 1;
+	box-sizing: border-box;
 }
 <% }); %>

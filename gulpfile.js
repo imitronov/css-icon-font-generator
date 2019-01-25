@@ -1,34 +1,80 @@
+const arg = (argList => {
+  let arg = {}, a, opt, thisOpt, curOpt;
+  for (a = 0; a < argList.length; a++) {
+    thisOpt = argList[a].trim();
+    opt = thisOpt.replace(/^\-+/, '');
+    if (opt === thisOpt) {
+      // argument value
+      if (curOpt) arg[curOpt] = opt;
+      curOpt = null;
+    } else {
+      // argument name
+      curOpt = opt;
+      arg[curOpt] = true;
+    }
+  }
+  return arg;
+})(process.argv);
+
 /* Feather */
-var iconPack = 'feather';
-var iconPrefix = 'fe';
+if(arg.fe) {
+	var iconPack = 'feather';
+	var iconPrefix = 'fe';
+}
+
+/* SimpleIcons */
+if(arg.si) {
+	var iconPack = 'simpleicons';
+	var iconPrefix = 'si';
+}
 
 /* ZondIcons */
-// var iconPack = 'zondicons';
-// var iconPrefix = 'zi';
+if(arg.zi) {
+	var iconPack = 'zondicons';
+	var iconPrefix = 'zi';
+}
 
 /* 60 Vicons */
-// var iconPack = '60vicons';
-// var iconPrefix = 'vi';
+if(arg.vi) {
+	var iconPack = '60vicons';
+	var iconPrefix = 'vi';
+}
 
 /* LinearIcons Free */
-// var iconPack = 'linearicons';
-// var iconPrefix = 'lnr';
+if(arg.lnr) {
+	var iconPack = 'linearicons';
+	var iconPrefix = 'lnr';
+}
 
 /* Entypo + */
-// var iconPack = 'entypo';
-// var iconPrefix = 'et';
+if(arg.et) {
+	var iconPack = 'entypo';
+	var iconPrefix = 'et';
+}
 
 /* Ionicon ios + */
-// var iconPack = 'ionios';
-// var iconPrefix = 'ios';
+if(arg.ios) {
+	var iconPack = 'ionios';
+	var iconPrefix = 'ios';
+}
 
 /* Ionicon material design + */
-// var iconPack = 'ionmd';
-// var iconPrefix = 'md';
+if(arg.md) {
+	var iconPack = 'ionmd';
+	var iconPrefix = 'md';
+}
 
 /* Ionicon logo + */
-// var iconPack = 'ionlogo';
-// var iconPrefix = 'logo';
+if(arg.logo) {
+	var iconPack = 'ionlogo';
+	var iconPrefix = 'logo';
+}
+
+/* Custom */
+if(arg.pack !== undefined && arg.prefix !== undefined) {
+	var iconPack = arg.pack;
+	var iconPrefix = arg.prefix;
+}
 
 /*******************************************/
 
