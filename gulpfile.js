@@ -76,6 +76,10 @@ if(arg.pack !== undefined && arg.prefix !== undefined) {
 	var iconPrefix = arg.prefix;
 }
 
+console.log('prefix: ', iconPrefix);
+console.log('pack: ', iconPack);
+console.log("\n");
+
 /*******************************************/
 
 var src	= './';
